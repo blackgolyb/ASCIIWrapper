@@ -1,0 +1,33 @@
+{
+  "name": "ascii-wrapper",
+  "version": "0.0.1",
+  "description": "wrap some component with ASCII border",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackgolyb/ASCIIWrapper.git"
+  },
+  "keywords": [
+    "ascii",
+    "react"
+  ],
+  "author": "blackgolyb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackgolyb/ASCIIWrapper/issues"
+  },
+  "homepage": "https://github.com/blackgolyb/ASCIIWrapper#readme",
+  "dependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3"
+  }
+}
