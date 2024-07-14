@@ -5,7 +5,7 @@ import {
 	ASCIIWrapperProvider,
 } from "./ASCIIWrapperContext";
 
-import { getTextSizeInElement } from "utils/utils.js";
+import { getTextSizeInElement } from "./utils.js";
 
 import styles from "./ASCIIWrapper.module.css";
 
