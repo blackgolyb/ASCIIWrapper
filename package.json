@@ -1,8 +1,9 @@
 {
   "name": "ascii-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "wrap some component with ASCII border",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir dist"
