@@ -1,6 +1,6 @@
 {
   "name": "ascii-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "wrap some component with ASCII border",
   "main": "dist/index.js",
   "scripts": {
