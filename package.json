@@ -1,12 +1,11 @@
 {
   "name": "ascii-wrapper",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "wrap some component with ASCII border",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -22,13 +21,19 @@
     "url": "https://github.com/blackgolyb/ASCIIWrapper/issues"
   },
   "homepage": "https://github.com/blackgolyb/ASCIIWrapper#readme",
-  "dependencies": {
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.24.8",
     "@babel/preset-env": "^7.24.8",
-    "@babel/preset-react": "^7.24.7"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.3"
+    "@babel/preset-react": "^7.24.7",
+    "@biomejs/biome": "1.8.3",
+    "rollup": "^2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }

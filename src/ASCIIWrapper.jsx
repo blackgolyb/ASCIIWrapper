@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, cloneElement } from "react";
 
 import {
 	useASCIIWrapperContext,
@@ -150,7 +150,7 @@ const ASCIIWrapperComponent = ({
 					</>
 				)}
 			</div>
-			{React.cloneElement(children, {
+			{cloneElement(children, {
 				ref: mergeRefs(children.ref, innerRef),
 				className: `${styles["input-elem"]} ${children.props.className}`,
 			})}
