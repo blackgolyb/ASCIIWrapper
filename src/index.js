@@ -1,5 +1,5 @@
-import ASCIIWrapper from "./ASCIIWrapper";
-import { useASCIIWrapperContext } from "./ASCIIWrapperContext";
+import ASCIIWrapper from "./components/ASCIIWrapper";
+import { useASCIIWrapperContext } from "./components/ASCIIWrapperContext";
 
 export { ASCIIWrapper, useASCIIWrapperContext };
 export default ASCIIWrapper;

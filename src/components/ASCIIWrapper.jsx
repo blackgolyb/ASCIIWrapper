@@ -5,23 +5,11 @@ import {
 	ASCIIWrapperProvider,
 } from "./ASCIIWrapperContext";
 
-import { getTextSizeInElement } from "./utils.js";
+import { getTextSizeInElement } from "../utils/getSize.js";
+import { mergeRefs } from "../utils/mergeRefs.js";
+import { strRepeatPattern } from "../utils/strRepeatPattern.js";
 
 import styles from "./ASCIIWrapper.module.css";
-
-const mergeRefs = (...refs) => {
-	return (node) => {
-		for (const ref of refs) {
-			if (!ref) continue;
-			ref.current = node;
-		}
-	};
-};
-
-const strRepeatPattern = (pattern, len) => {
-	const numOfRepeats = Math.ceil(len / pattern.length);
-	return pattern.repeat(numOfRepeats).slice(0, len);
-};
 
 const defaultConfig = {
 	verticalPattern: "|",
