@@ -1,6 +1,6 @@
 {
   "name": "ascii-wrapper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "wrap some component with ASCII border",
   "module": "dist/index.esm.js",
   "scripts": {

@@ -34,6 +34,7 @@ const ASCIIWrapperComponent = ({
 	border,
 	children,
 	className,
+	bordersClassName,
 	...rest
 }) => {
 	const { setASCIIBorders } = useASCIIWrapperContext();
@@ -125,10 +126,13 @@ const ASCIIWrapperComponent = ({
 				focusInput(e);
 			}}
 			{...rest}
-			className={`${styles.input} ${className || ""}`}
+			className={styles.input + " " + className}
 			ref={wrapperRef}
 		>
-			<div ref={ASCIIBorderRef} className={styles["input-ascii"]}>
+			<div
+				ref={ASCIIBorderRef}
+				className={styles["input-ascii"] + " " + bordersClassName}
+			>
 				{border ? (
 					border
 				) : (

@@ -1,7 +1,6 @@
 .input-ascii {
-    font-size: inherit;
+    font: inherit;
     position: absolute;
-    line-height: 1;
     white-space: pre-wrap;
     width: max-content !important;
 
@@ -11,7 +10,7 @@
 }
 
 .input-elem {
-    font-size: inherit;
+    font: inherit;
 
     position: absolute;
     top: 50%;
