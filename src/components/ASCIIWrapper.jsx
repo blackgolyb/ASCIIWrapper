@@ -8,6 +8,7 @@ import {
 import { getTextSizeInElement } from "../utils/getSize.js";
 import { mergeRefs } from "../utils/mergeRefs.js";
 import { strRepeatPattern } from "../utils/strRepeatPattern.js";
+import { debounce } from "../utils/debounce.js";
 
 import styles from "./ASCIIWrapper.module.css";
 
@@ -35,6 +36,7 @@ const ASCIIWrapperComponent = ({
 	children,
 	className,
 	bordersClassName,
+	delay = 300,
 	...rest
 }) => {
 	const { setASCIIBorders } = useASCIIWrapperContext();
@@ -108,15 +110,21 @@ const ASCIIWrapperComponent = ({
 	};
 
 	useEffect(() => {
+		let update = updateInput;
+		if (delay !== undefined && delay !== null && delay !== 0) {
+			update = debounce(updateInput, delay);
+		}
 		const resizeObserver = new ResizeObserver((entries, observer) => {
-			updateInput();
+			update();
 		});
 
-		window.addEventListener("resize", updateInput);
+		updateInput();
+
+		window.addEventListener("resize", update);
 		resizeObserver.observe(wrapperRef.current);
 
 		return () => {
-			window.removeEventListener("resize", updateInput);
+			window.removeEventListener("resize", update);
 		};
 	}, []);
 
